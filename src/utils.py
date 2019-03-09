@@ -5,7 +5,7 @@ from selenium import webdriver
 # 账号地址
 free_config = "https://free-ss.site/v/443.json"
 # 项目目录
-home_dir = os.path.dirname(os.path.dirname(__file__))
+home_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # 程序目录
 bin_dir = home_dir+"/bin"
 # v2ray 代理目录
