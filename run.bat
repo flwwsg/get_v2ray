@@ -1,1 +1,0 @@
-D:\dev\get_v2ray\venv\Scripts\python.exe D:/dev/get_v2ray/src/v2ray.py
