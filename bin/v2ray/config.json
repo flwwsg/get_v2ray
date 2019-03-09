@@ -1,0 +1,71 @@
+{
+  "inbounds": [
+    {
+      "port": 1080,
+      "protocol": "socks",
+      "settings": {
+        "udp": true
+      }
+    }
+  ],
+  "outbounds": [
+    {
+      "mux": {
+        "enabled": true
+      },
+      "protocol": "vmess",
+      "settings": {
+        "vnext": [
+          {
+            "address": "www.kernels.bid",
+            "port": 443,
+            "users": [
+              {
+                "alterId": 0,
+                "id": "d235774a-5df7-3af6-56b1-73e82612c4df"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "www.kernels.bid"
+        },
+        "wsSettings": {
+          "path": "/ws"
+        }
+      }
+    },
+    {
+      "protocol": "freedom",
+      "settings": {},
+      "tag": "direct"
+    }
+  ],
+  "routing": {
+    "settings": {
+      "domainStrategy": "IPIfNonMatch",
+      "rules": [
+        {
+          "domain": [
+            "geosite:cn"
+          ],
+          "outboundTag": "direct",
+          "type": "field"
+        },
+        {
+          "ip": [
+            "geoip:cn",
+            "geoip:private"
+          ],
+          "outboundTag": "direct",
+          "type": "field"
+        }
+      ]
+    },
+    "strategy": "rules"
+  }
+}
