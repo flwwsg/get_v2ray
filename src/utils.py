@@ -20,6 +20,7 @@ if os.name == "nt":
     from selenium.webdriver.chrome.options import Options
     opt = Options()
     opt.add_argument("-headless")
+    opt.add_argument('--disable-gpu')
     web_driver = webdriver.Chrome(bin_dir + "/chromedriver.exe", chrome_options=opt)
 elif os.name == "posix":
     v2ray_dir = bin_dir+"/v2ray-linux"
