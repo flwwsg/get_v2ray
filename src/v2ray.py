@@ -22,5 +22,5 @@ if config_source == "":
 with open(config_file, "w") as f:
     f.write(config_source)
 if need_root_permission():
-    raise Exception("需要超级用户权限, 请手动启动%s" % v2ray_dir)
+    raise Exception("需要超级用户权限, 请手动启动%s" % v2ray_program)
 os.system(v2ray_program)
