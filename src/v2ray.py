@@ -17,7 +17,7 @@ if len(firefox_json) != 0:
     config_source = firefox_json[0].text
 web_driver.close()
 if config_source == "":
-    raise Exception("v2ray 配置有变动！！！")
+    raise Exception("请在hosts 文件添加104.18.18.18 free-ss.site或者联系flwwsg@qq.com ")
 # 更新v2ray配置文件
 with open(config_file, "w") as f:
     f.write(config_source)
