@@ -27,7 +27,7 @@ elif os.name == "posix":
     v2ray_program = "sudo "+v2ray_dir+"/v2ray"
     from selenium.webdriver.firefox.options import Options
     opt = Options()
-    # opt.add_argument("-headless")
+    opt.add_argument("-headless")
     web_driver = webdriver.Firefox(executable_path=bin_dir + "/geckodriver", firefox_options=opt)
 else:
     raise Exception("system %s does not supported" % os.name)
