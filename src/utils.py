@@ -28,7 +28,7 @@ elif os.name == "posix":
     from selenium.webdriver.firefox.options import Options
     opt = Options()
     opt.add_argument("-headless")
-    web_driver = webdriver.Firefosx(executable_path=bin_dir + "/geckodriver", firefox_options=opt)
+    web_driver = webdriver.Firefox(executable_path=bin_dir + "/geckodriver", firefox_options=opt)
 else:
     raise Exception("system %s does not supported" % os.name)
 
