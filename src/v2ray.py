@@ -7,7 +7,8 @@ config_file = v2ray_dir+"/config.json"
 # 获取配置，免费账号每天会更新
 web_driver.get(free_config)
 # 处理ddos， 目前只要简单的sleep
-time.sleep(10)
+# 需要应对人机检测
+time.sleep(30)
 # 刷新页面，获取数据
 web_driver.refresh()
 # 通过chrome获取json数据

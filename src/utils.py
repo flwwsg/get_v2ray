@@ -19,15 +19,15 @@ if os.name == "nt":
     v2ray_program = v2ray_dir+"/v2ray.exe"
     from selenium.webdriver.chrome.options import Options
     opt = Options()
-    opt.add_argument("-headless")
-    opt.add_argument('--disable-gpu')
+    # opt.add_argument("-headless")
+    # opt.add_argument('--disable-gpu')
     web_driver = webdriver.Chrome(bin_dir + "/chromedriver.exe", chrome_options=opt)
 elif os.name == "posix":
     v2ray_dir = bin_dir+"/v2ray-linux"
     v2ray_program = "sudo "+v2ray_dir+"/v2ray"
     from selenium.webdriver.firefox.options import Options
     opt = Options()
-    opt.add_argument("-headless")
+    # opt.add_argument("-headless")
     web_driver = webdriver.Firefox(executable_path=bin_dir + "/geckodriver", firefox_options=opt)
 else:
     raise Exception("system %s does not supported" % os.name)
