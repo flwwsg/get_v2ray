@@ -2,4 +2,4 @@
 *.pyc
 geckodriver.log
 config.json
-.venv
+**/.venv/
